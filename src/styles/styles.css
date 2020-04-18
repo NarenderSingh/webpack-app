@@ -1,0 +1,8 @@
+h1 {
+  color: salmon;
+}
+
+#images {
+  background: url("../images/img.jpg");
+  height: 500px;
+}
