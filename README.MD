@@ -1,9 +1,13 @@
-#WEBPACK CONFIGURATIONS APP
+##WEBPACK CONFIGURATIONS APP
 
-#WEBPACK 
+##WEBPACK
 
 https://webpack.js.org/
 
-#BABEL
+##BABEL
 
 https://babeljs.io/
+
+##REACT
+
+https://reactjs.org/

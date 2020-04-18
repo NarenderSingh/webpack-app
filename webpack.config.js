@@ -1,19 +1,32 @@
 const path = require("path");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-  entry: {
-    about: "./src/contact.js",
-    contact: "./src/contact.js",
-  },
+  ////Used for multiple multiple enteries
+
+  // entry: {
+  //   about: "./src/contact.js",
+  //   contact: "./src/contact.js",
+  // },
+  // output: {
+  //   filename: "[name].bundle.js",
+  //   path: path.resolve(__dirname, "dist"),
+  // },
+
+  entry: "./src/index.js",
   output: {
-    filename: "[name].bundle.js",
+    filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
+  plugins: [new HtmlWebpackPlugin()],
+
   optimization: {
-    minimize: false,
-    splitChunks: {
-      chunks: "all",
-    },
+    // minimize: false,
+    // splitChunks: {
+    //   chunks: "all",
+    // },
+    minimizer: [new UglifyJsPlugin()],
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
